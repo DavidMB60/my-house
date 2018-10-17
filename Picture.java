@@ -30,19 +30,19 @@ public class Picture
      */
     public void draw()
     {
-        sun = new Circle();
-        sun.changeColor("yellow");
-        sun.moveHorizontal(100);
-        sun.moveVertical(120);
-        sun.changeSize(80);
-        sun.makeVisible();
-        
         floor = new Square();
         floor.changeSize(1000);
         floor.changeColor("green");
         floor.moveHorizontal(-350);
         floor.moveVertical(120);
         floor.makeVisible();
+        
+        sun = new Circle();
+        sun.changeColor("yellow");
+        sun.moveHorizontal(100);
+        sun.moveVertical(120);
+        sun.changeSize(80);
+        sun.makeVisible();
         
         wall = new Square();
         wall.moveHorizontal(-140);
@@ -96,4 +96,9 @@ public class Picture
             floor.changeColor("green");
         }
     }
+    
+    public void atardecer()
+    {
+        sun.slowMoveVertical(200);
+    }    
 }
